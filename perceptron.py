@@ -3,7 +3,7 @@ import numpy as np
 def perceptron(x, y, phi=0.1):
     """
     Input
-    x: N feature [N, M]
+    x: data [N, M]
     y: label [N]
     phi: learning rate
 
@@ -13,15 +13,19 @@ def perceptron(x, y, phi=0.1):
 
     Notice that perceptron can not be used for linear non separable data
     """
+    x = np.hstack((x, np.ones((x.shape[0], 1))))
     w = np.zeros((x.shape[1]))
-    b = 0
     while True:
         flag = True
         for i, x_i in enumerate(x):
-            if y[i]*(w*x_i+b)<0:
-                w = w - phi*y[i]*x_i
-                b = b - phi*y[i]
+            if y[i]*np.dot(w, x_i)<=0:
+                w = w + phi*y[i]*x_i
                 flag = False
+                break
         if flag:
             break
-    return w, b
+    return w[:-1], w[-1]
+
+x = np.array([[0.,0.],[1.,1.]])
+y = np.array([1,-1])
+print(perceptron(x, y))
