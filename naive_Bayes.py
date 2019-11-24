@@ -14,9 +14,9 @@ def naive_Bayes(X, Y, x, L=0):
     Notice that each feature in X and x must be discrete
     """
     x_f = [set() for i in range(X.shape[1])]
-    p_y = {}
-    p_x_y = {}
-    I_xy = {}
+    p_y = {} # p(y)
+    p_x_y = {} #p(x|y)
+    I_xy = {} #I(x, y)
     y = []
     for i in range(Y.shape[0]):
         if Y[i] not in p_y.keys():
@@ -26,8 +26,8 @@ def naive_Bayes(X, Y, x, L=0):
     k = len(p_y.keys())
     for i in range(X.shape[0]):
         for j in range(X.shape[1]):
-            if X[1][j] not in x_f[j]:
-                x_f[i].add(X[i][j])
+            if X[i][j] not in x_f[j]:
+                x_f[j].add(X[i][j])
             if (X[i][j], Y[i], j) not in I_xy.keys():
                 I_xy[(X[i][j], Y[i], j)] = 1
             else:

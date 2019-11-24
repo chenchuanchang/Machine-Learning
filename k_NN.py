@@ -19,7 +19,7 @@ def k_NN(X, Y, x, k=1, p=2):
     import heapq as hq
     y = []
     for x_i in x:
-        que = []
+        que = [] # minimum heap
         label_y = None
         label_MAX = 0
         for i, X_i in enumerate(X):
