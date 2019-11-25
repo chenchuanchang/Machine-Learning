@@ -84,13 +84,9 @@ def build_tree(X, Y, f_set, alg):
 
 
 def fit(dt, x):
-    if dt.sub == None:
-        return dt.label
-    else:
-        while dt.sub != None:
-
-            dt = dt.sub[x[dt.feature]]
-        return dt.label
+    while dt.sub != None:
+        dt = dt.sub[x[dt.feature]]
+    return dt.label
 
 def decision_tree(X, Y, x, alg = 'C45'):
     """
