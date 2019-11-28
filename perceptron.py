@@ -29,7 +29,7 @@ class perceptron:
         x: forecast data [N, M]
 
         Output
-        y: forecate label [N]
+        y: forecast label [N]
         """
         x = np.hstack((x, np.ones((x.shape[0], 1))))
         y = [1 if np.dot(self.w, x_i)>0 else -1 for x_i in x]

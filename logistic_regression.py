@@ -41,7 +41,7 @@ class logistic_regression:
         x: forecast data [N, M]
 
         Output
-        y: forecate label [N]
+        y: forecast label [N]
         """
         x = np.hstack((x, np.ones((x.shape[0], 1))))
         y = []
