@@ -54,7 +54,7 @@ class logistic_regression:
             y.append(self.ma_y[np.argmax(e_w_x)])
         return y
 
-x = np.array([[0.,0.],[1.,1.], [1,-1]])
-y = np.array([1,-1,2])
-model = logistic_regression(x, y)
-print(model.fit(x))
+# x = np.array([[0.,0.],[1.,1.], [1,-1]])
+# y = np.array([1,-1,2])
+# model = logistic_regression(x, y)
+# print(model.fit(x))

@@ -42,8 +42,8 @@ class k_NN:
             y.append(label_y)
         return y
 
-X = np.random.rand(5, 5)
-Y = np.array([1, 2, 3, 4, 5])
-x = np.random.rand(10, 5)
-model = k_NN(X, Y)
-print(model.fit(x, 2, 2))
+# X = np.random.rand(5, 5)
+# Y = np.array([1, 2, 3, 4, 5])
+# x = np.random.rand(10, 5)
+# model = k_NN(X, Y)
+# print(model.fit(x, 2, 2))

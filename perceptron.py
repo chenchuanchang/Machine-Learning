@@ -8,8 +8,6 @@ class perceptron:
         y: label [N]
         phi: learning rate
 
-        Output
-        w: weight vector [M+1]
         Notice that perceptron can not be used for linear non separable data
         """
         x = np.hstack((x, np.ones((x.shape[0], 1))))
@@ -35,7 +33,7 @@ class perceptron:
         y = [1 if np.dot(self.w, x_i)>0 else -1 for x_i in x]
         return y
 
-x = np.array([[0.,0.],[1.,1.]])
-y = np.array([1,-1])
-model = perceptron(x, y)
-print(model.fit(x))
+# x = np.array([[0.,0.],[1.,1.]])
+# y = np.array([1,-1])
+# model = perceptron(x, y)
+# print(model.fit(x))

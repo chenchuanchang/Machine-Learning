@@ -41,8 +41,8 @@ class linear_regression:
         y = [np.dot(self.w, x_i) for x_i in x]
         return y
 
-X = np.array([[i] for i in range(10)])
-Y = np.array([5.56,5.7,5.91,6.4,6.8,7.05,8.9,8.7,9,9.05])
-x = np.array([[i] for i in range(10)])
-model = linear_regression(X, Y, 'lasso')
-print(model.fit(x))
+# X = np.array([[i] for i in range(10)])
+# Y = np.array([5.56,5.7,5.91,6.4,6.8,7.05,8.9,8.7,9,9.05])
+# x = np.array([[i] for i in range(10)])
+# model = linear_regression(X, Y, 'lasso')
+# print(model.fit(x))
