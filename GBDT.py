@@ -37,10 +37,7 @@ class GBDT:  # 1-regression for example
             y = y + self.G[m].fit(x)
         return y
 
-import random
-# X = np.array([[i+random.random(),i+random.random()] for i in range(10)])
-X = np.array([[i+1] for i in range(10)])
-Y = np.array([5.56,5.7,5.91,6.4,6.8,7.05,8.9,8.7,9,9.05])
-# x = np.array([[i+random.random(),i+random.random()] for i in range(10)])
-model = GBDT(X, Y)
-print(model.fit(X))
+# X = np.array([[i+1] for i in range(10)])
+# Y = np.array([5.56,5.7,5.91,6.4,6.8,7.05,8.9,8.7,9,9.05])
+# model = GBDT(X, Y)
+# print(model.fit(X))
