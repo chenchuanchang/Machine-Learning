@@ -4,20 +4,24 @@ class k_NN:
     def __init__(self, X, Y):
         """
         Input
-        self.X: data [N, M]
+        X: data [N, M]
         Y: label [N]
-        self.X: forecast data [Q, M]
-        k: number of nearest neighbor, default is 1
-        p: Lp distance, default is 2
-
-        Output
-        y: forecast label [k]
 
         This algorithm can be implemented by kd-tree
         """
         self.X = X
         self.Y = Y
     def fit(self, x, k=1, p=2):
+        """
+        Input
+        x: forecast data [Q, M]
+        k: number of nearest neighbor, default is 1
+        p: Lp distance, default is 2
+
+        Output
+        y: forecast label [Q]
+
+        """
         if k > self.X.shape[0]:
             print("Error: k should be smaller than the number of data self.X")
         import heapq as hq
