@@ -49,7 +49,7 @@ class naive_Bayes:
             y_tar = None
             for y_i in self.p_y.keys():
                 p_y_x = self.p_y[y_i]
-                for j in range(X.shape[1]):
+                for j in range(x.shape[1]):
                     p_y_x = p_y_x * self.p_x_y[(x_i[j], y_i, j)]
                 if p_y_x > MAX:
                     MAX = p_y_x
@@ -81,4 +81,4 @@ class naive_Bayes:
 #     [2, 'S']
 # ])
 # model = naive_Bayes(X, Y)
-# print(model.fit(x))
+# print(model.fit(X))

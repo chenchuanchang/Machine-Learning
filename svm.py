@@ -117,7 +117,7 @@ class svm:
             y.append(1 if y_v>0 else -1)
         return np.array(y)
 
-x = np.array([[0.,0.],[1.,1.],[0.,1.],[1.,0.]])
-y = np.array([1,-1,1,-1])
-model = svm(x, y)
-print(model.fit(x))
+# x = np.array([[0.,0.],[1.,1.],[0.,1.],[1.,0.]])
+# y = np.array([1,-1,1,-1])
+# model = svm(x, y)
+# print(model.fit(x))
